@@ -27,7 +27,6 @@ do
             read -p "Enter last name: " last_name
             read -p "Enter phone number: " phone_number
             
-         
             last_name_prefix=$(echo $last_name | cut -c1-4 | tr '[:lower:]' '[:upper:]')
             first_name_prefix=$(echo $first_name | cut -c1 | tr '[:lower:]' '[:upper:]')
             patient_id="$last_name_prefix$first_name_prefix"
