@@ -40,7 +40,7 @@ do
                 counter=$((counter+1))
             done
             
-            # Add new patient record to patients.csv
+  
             echo "$patient_id,$first_name,$last_name,$phone_number" >> patients.csv
             
             echo ""
