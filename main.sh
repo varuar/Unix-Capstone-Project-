@@ -4,7 +4,6 @@ clear
 echo -e "\e[1;31mWelcome to the Hospital Patient Management Portal System!!!\e[0m"
 echo ""
 
-
 while true
 do
     echo "[L/l] List patients"
@@ -33,14 +32,12 @@ do
             first_name_prefix=$(echo $first_name | cut -c1 | tr '[:lower:]' '[:upper:]')
             patient_id="$last_name_prefix$first_name_prefix"
             
-        
             counter=2
             while grep -q $patient_id patients.csv; do
                 patient_id="${last_name_prefix}${first_name_prefix}${counter}"
                 counter=$((counter+1))
             done
             
-  
             echo "$patient_id,$first_name,$last_name,$phone_number" >> patients.csv
             
             echo ""
